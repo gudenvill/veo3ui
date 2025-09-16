@@ -23,7 +23,7 @@ type StudioMode =
 const POLL_INTERVAL_MS = 5000;
 
 const VeoStudio: React.FC = () => {
-  const [mode, setMode] = useState<StudioMode>("create-image");
+  const [mode, setMode] = useState<StudioMode>("create-video");
   const [prompt, setPrompt] = useState(""); // Video or image prompt
   const [negativePrompt, setNegativePrompt] = useState("");
   const [aspectRatio, setAspectRatio] = useState("16:9");
@@ -93,6 +93,9 @@ const VeoStudio: React.FC = () => {
 
   // Friendly model label for UI
   const modelLabel = useMemo(() => {
+    if (selectedModel.includes("veo")) {
+      return "Jolioo Video 1.0";
+    }
     const cleaned = selectedModel
       .replace(/_/g, " ")
       .replace(/-/g, " ")

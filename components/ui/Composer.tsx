@@ -232,7 +232,7 @@ const Composer: React.FC<ComposerProps> = ({
         </div>
 
         {/* Mode Badges */}
-        <div className="flex gap-1 mt-3 bg-white/10 rounded-md p-1 border border-white/20">
+        <div className="flex gap-1 mt-3 bg-white/10 rounded-md p-1 border border-white/20 hidden">
           <Tooltip>
             <TooltipTrigger asChild>
               <button

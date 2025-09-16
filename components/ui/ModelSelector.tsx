@@ -43,7 +43,7 @@ const ModelSelector: React.FC<ModelSelectorProps> = ({
   };
 
   return (
-    <div className="relative flex items-center">
+    <div className="relative flex items-center hidden">
       <select
         aria-label="Model selector"
         value={selectedModel}
